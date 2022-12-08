@@ -1,0 +1,344 @@
+:root {
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Grayish-Blue: hsl(206, 6%, 90%);
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+    /* Gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Very-Light-Magenta: hsl(289, 100%, 66%);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    /* border: 5px solid; */
+
+}
+
+.pink-square {
+    width: 550px;
+    height: 850px;
+    background-color: var(--Moderate-Violet);
+    border-bottom-left-radius: 280px;
+    border-bottom-right-radius: 280px;
+    position: absolute;
+    left: -150px;
+    z-index: -1;
+
+}
+
+.phone {
+    width: 320px;
+    height: 630px;
+    border: white solid 10px;
+    border-radius: 40px;
+    color: white;
+    position: relative;
+    left: 215px;
+    top: 200px;
+    background-color: var(--Light-Grayish-Violet);
+    overflow: hidden;
+    position: relative;
+
+
+}
+
+
+.user-container {
+    background: linear-gradient(to right,
+    var(--Light-Violet), 60%,
+    var(--Very-Light-Magenta));
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.user-container>* {
+    margin-top: 20px;
+}
+
+.user-details {
+    margin-left: 1em;
+    
+}
+
+.profile-container {
+    width: 1.8em;
+    height: auto;
+    /* border: solid red; */
+    display: flex;
+    
+}
+
+.profile-container img {
+    border-radius: 50%;
+    border: solid white 2px;
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+.three-dots:after {
+    content: '\2807';
+    font-size: 0.85em;
+    margin-right: 1em;
+    /*this margin had been given also to .user-detalis , mabey is there a way to make this space without margin*/
+}
+
+.arrow-left {
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* border: 2px solid red; */
+}
+
+.name {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 0.2em;
+}
+
+.status {
+    color: white;
+    opacity: 0.3;
+    font-size: 0.6em;
+}
+
+.white-rectangle {
+    width: 50%;
+    height: 5%;
+    background-color: white;
+    position: absolute;
+    border-radius: 15px;
+    left: 25%;
+    top: -8px;
+}
+
+.chat-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    height: calc(100% - 85px);
+    padding: 0.5em 0.8em;
+    color: var(--Light-Magenta);
+    
+    
+    
+}
+
+.chat-area .msg,
+.chat-area img {
+    margin-bottom: 8px;
+    line-height: 1.5em;
+    /*Could i create this gap without margin???*/
+}
+
+.images-content {
+    /* border: 2px solid; */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.image-container {
+    width: 45px;
+    height: auto;
+    /* border: 2px solid; */
+    
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.msg {
+    font-size: 0.55em;
+    padding: 1em;
+    background-color: var(--Grayish-Blue);
+    width: 150px;
+    border-radius: 1.2em;
+}
+
+.center-messages {
+    align-self: flex-end;
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+
+.center-messages .msg {
+    background-color: white;
+}
+
+.colorful {
+    color: white;
+    background: linear-gradient(to left,
+    var(--Light-Violet), 60%,
+    var(--Very-Light-Magenta));
+    border-bottom-left-radius: 2px;
+    display: flex;
+    align-items: center;
+    height: 4.5em;
+    width: 175px;
+    
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 8px;
+}
+
+.circle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid grey;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.text-box input {
+    border: none;
+    padding: 1em;
+    border-radius: 2em;
+    width: 100%;
+    font-size: 0.85em;
+    color: rgb(222, 21, 21);
+    position: relative;
+    /* background-color: rgb(224, 229, 82); */
+    /* border: solid purple 2px; */
+}
+
+.text-box {
+    position: relative;
+    /* border: 2px solid; */
+    
+}
+
+.circle-send {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    /* border: 2px solid red; */
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    position: absolute;
+    right: 5px;
+    top: calc(100% - 31px);
+    
+}
+
+.circle-send-arrow {
+    position: relative;
+    font-size: 2em;
+    background: purple;
+    top: 13px;
+    
+    
+}
+
+.circle-send-arrow::after,
+.circle-send-arrow::before {
+    content: "";
+    position: absolute;
+    background: black;
+    height: 0.1em;
+    width: 0.3em;
+    border-radius: 2em;
+    background-color: white;
+    right: 10.9px;
+    
+}
+
+.circle-send-arrow::before {
+    transform: rotate(-45deg);
+    bottom: 0.85em;
+}
+
+.circle-send-arrow::after {
+    transform: rotate(45deg);
+    bottom: 1em;
+}
+
+input::placeholder {
+    color: rgb(184, 176, 176);
+    position: absolute;
+    left: 25px;
+}
+
+.container {
+    /* border: 5px solid; */
+    min-height: 100vh;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+
+.right-column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: rgb(207, 195, 195);
+    width: 400px;
+    margin-left: 200px;
+}
+
+.right-column-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    color: rgb(44, 43, 43);
+    width: 450;
+    line-height: 1.5em;
+    
+    
+}
+
+.fourth {
+    text-align: right;
+    width: fit-content;
+}
+
